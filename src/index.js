@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React  from "react";
+import ReactDOM  from  "react-dom";
+import 'bootstrap/dist/css/bootstrap.css';
+import "./style.css"
+import Header from "./components/header";
+import ComProduct from "./components/com_product";
+import ComAbout from "./components/com_about";
+import ComPricing from "./components/com_pricing";
+import ComSubscribe from "./components/com_subscribe";
+import Combottom from "./components/com_bottom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Index(props) 
+{
+  return (<div className="main">
+               
+            <Header/>
+            <ComProduct/>
+            <ComAbout/>
+            <ComPricing/>
+            <ComSubscribe/>
+            <Combottom/>
+
+          </div>
+  )
+         
+}
+
+ReactDOM.render(<Index/>, document.getElementById('root'));
